@@ -2,7 +2,7 @@
 
 環境センサーBME280から値を取得してslackに通知するスクリプト.
 
-## `lib/pri` 以下のライブラリについて
+## `lib/rpi` 以下のライブラリについて
 
 Javier Valencia氏が下記フォーラムにて公開されたものです。
 https://www.raspberrypi.org/forums/viewtopic.php?f=34&t=157278
