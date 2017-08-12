@@ -17,3 +17,19 @@ puts DateTime.now.strftime('%F %T')
 puts "Temperature: #{bme.temperature} ºC"
 puts "Pressure: #{bme.pressure} mb"
 puts "Humidity: #{bme.humidity} %"
+
+# CSV形式で書き出す
+require "csv"
+today = DateTime.now.strftime('%Y%m%d')
+today_data_file = File.expand_path('./data/' + today + '.csv', __dir__)
+csv = open(today_data_file, "a")
+csv.write(
+  [
+    DateTime.now.strftime('%T'),
+    bme.temperature,
+    bme.humidity,
+    bme.pressure,
+  ].to_csv
+)
+csv.close
+
