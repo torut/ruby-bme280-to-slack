@@ -23,7 +23,7 @@ require 'slack-notifier'
 # slackに通知
 attachment = {
   color: "good",
-  pretext: "#{Time.now().strftime('%F %T')}の気温: #{bme.temperature} ℃",
+  text: "#{Time.now().strftime('%F %T')}の気温: #{bme.temperature} ℃",
   fields: [
     {
       title: "気温",
