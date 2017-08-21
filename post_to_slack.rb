@@ -44,8 +44,8 @@ attachment = {
   ts: Time.now.to_i,
 }
 
-attachment[:color] = 'danger' if bme.temperature > 35;
 attachment[:color] = 'warning' if bme.temperature > 30;
+attachment[:color] = 'danger' if bme.temperature > 35;
 
 notifier = Slack::Notifier.new WEBHOCKURL,
                                channel: CHANNEL,
